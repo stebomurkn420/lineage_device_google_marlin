@@ -138,7 +138,7 @@ endif
 BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
 TARGET_KERNEL_SOURCE := kernel/google/marlin
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r365631c
+#TARGET_KERNEL_CLANG_VERSION := r365631c
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_BOARD_KERNEL_HEADERS := device/google/marlin/kernel-headers
 
@@ -169,5 +169,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/marlin/device_framew
 EXCLUDE_SERIF_FONTS := true
 
 TARGET_FLATTEN_APEX := true
+
+SELINUX_IGNORE_NEVERALLOWS := true
 
 -include vendor/google_devices/marlin/BoardConfigVendor.mk
