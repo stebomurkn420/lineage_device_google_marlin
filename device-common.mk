@@ -51,6 +51,11 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.service.debuggable=1 \
     persist.service.adb.enable=1
 
+# Include Google apps by default
+ifneq ($(TARGET_BUILD_GAPPS),false)
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+endif
+
 PRODUCT_SOONG_NAMESPACES += \
     device/google/marlin \
     vendor/google/camera \
